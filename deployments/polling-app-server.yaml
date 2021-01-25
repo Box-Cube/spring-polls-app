@@ -21,7 +21,7 @@ spec:
 #        kubernetes.io/hostname: huangcz-cps-node02.novalocal
       containers:
       - name: polling-app-server
-        image: callicoder/polling-app-server:<BUILD_TAG>
+        image: harbor.box.com/cicd/polling-app-server:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
         ports:
           - name: http
