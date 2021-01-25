@@ -17,7 +17,7 @@ RUN npm install
 COPY . ./
 
 # Arguments
-ARG REACT_APP_API_BASE_URL
+ARG REACT_APP_API_BASE_URL="http://150.138.177.72:32080/api"
 ENV REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL}
 
 # Build the application
