@@ -17,7 +17,7 @@ spec:
    #   hostNetwork: true
       containers:
       - name: polling-app-client
-        image: harbor.box.com/polls-app/polling-app-client:<BUILD_TAG>
+        image: harbor.box.com/cicd/polling-app-client:<BUILD_TAG>
         #image: callicoder/polling-app-client:1.0.0
         imagePullPolicy: IfNotPresent
         ports:
