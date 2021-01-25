@@ -19,6 +19,8 @@ spec:
 #      hostNetwork: true
 #      nodeSelector:
 #        kubernetes.io/hostname: huangcz-cps-node02.novalocal
+      imagePullSecrets:
+      - name: jenkins-cicd
       containers:
       - name: polling-app-server
         image: harbor.box.com/cicd/polling-app-server:<BUILD_TAG>
