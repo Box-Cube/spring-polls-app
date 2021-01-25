@@ -12,9 +12,13 @@ spec:
       labels:                   # Labels that will be applied to all the Pods in this deployment
         app: polling-app-client
     spec:                       # Spec for the containers that will run inside the Pods
+   #   nodeSelector:
+   #     kubernetes.io/hostname: huangcz-cps-node02.novalocal
+   #   hostNetwork: true
       containers:
       - name: polling-app-client
-        image: callicoder/polling-app-client:1.0.0
+        image: harbor.box.com/polls-app/polling-app-client:1.0.0
+        #image: callicoder/polling-app-client:1.0.0
         imagePullPolicy: IfNotPresent
         ports:
           - name: http
@@ -36,3 +40,4 @@ spec:
   - name: http
     port: 80
     targetPort: 80
+    nodePort: 31080
