@@ -13,15 +13,15 @@ spec:
     metadata:
       labels:                 # Labels that will be applied to each Pod in this deployment
         app: polling-app-server
-      annotations:
-        cni.projectcalico.org/ipAddrs: "[\"172.16.20.200\"]"
+#      annotations:
+#        cni.projectcalico.org/ipAddrs: "[\"172.16.20.200\"]"
     spec:                     # Spec for the containers that will be run in the Pods
 #      hostNetwork: true
 #      nodeSelector:
 #        kubernetes.io/hostname: huangcz-cps-node02.novalocal
       containers:
       - name: polling-app-server
-        image: callicoder/polling-app-server:1.0.0
+        image: callicoder/polling-app-server:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
         ports:
           - name: http
